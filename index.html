@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>AI - Flocking - CodePen</title>
+
+  <!--
+Copyright (c) 2013 by Mike Ferron (http://codepen.io/ferronsays/pen/gcfph)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <canvas id="c"></canvas>
+<div id="show-info">Options</div>
+<div id="info">
+  <span id="close-info">x</span>
+  <div id="info-header">
+    Canvas Flocking AI 
+  </div>
+  <div id="inner-info">
+
+    <p>Left-click anywhere on the canvas to toggle mouse forcefield.</p>
+    <br/>
+    <span>BOIDS</span><br/><br/>	 
+    <span>Draw Trails:</span>
+    <input type="checkbox" id="trails" value="1" checked></input>
+    <br/><br/>
+    <span>Shape:</span>
+    <select id="style">
+      <option value="0">Square</option>
+      <option value="1">Line</option>
+      <option value="2" selected>Circle</option>
+    </select>
+    <br/><br/>
+    <span>Max Size:</span>
+    <select id="size">
+      <option value="1">Smallest</option>
+      <option value="3">Small</option>
+      <option value="5" selected>Medium</option>
+      <option value="8">Big</option>
+      <option value="10">Biggest</option>
+    </select>
+    <br/><br/>
+    <span>Max Speed:</span>
+    <select id="speed">
+      <option value="0.5">Slowest</option>
+      <option value="1">Slow</option>
+      <option value="2" selected>Medium</option>
+      <option value="3">Fast</option>
+      <option value="4">Faster</option>
+      <option value="5">Fastest</option>
+    </select>
+    <br/><br/>
+    <span>Attract Force:</span>
+    <select id="force">
+      <option value="0.01">Weakest</option>
+      <option value="0.05">Weak</option>
+      <option value="0.15" selected>Medium</option>
+      <option value="0.50">Strong</option>
+      <option value="1.00">Strongest</option>
+    </select>
+    <br/><br/>
+    <span>Neighbor Radius:</span>
+    <select id="radius">
+      <option value="10">Smallest</option>
+      <option value="25">Small</option>
+      <option value="50" selected>Medium</option>
+      <option value="100">Big</option>
+      <option value="200">Biggest</option>
+    </select>
+    <br/><br/><br/>
+    <span>MOUSE</span><br/><br/>
+    <span>Radius:</span>
+    <select id="mouseRadius">
+      <option value="10">Smallest</option>
+      <option value="25">Small</option>
+      <option value="50" selected>Medium</option>
+      <option value="100">Big</option>
+      <option value="200">Biggest</option>
+    </select>
+    <br/><br/>
+    <span>Force Type:</span>
+    <select id="mouseSign">
+      <option value="1">Attract</option>
+      <option value="-1" selected>Repulse</option>
+    </select>
+    <br/><br/>
+    <span>Max Force:</span>
+    <select id="mouseForce">
+      <option value="0.01">Weakest</option>
+      <option value="0.05">Weak</option>
+      <option value="0.10" selected>Medium</option>
+      <option value="0.15">Strong</option>
+      <option value="1.00">Strongest</option>
+    </select>
+  </div>
+</div>
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script src="js/index.js" type="text/javascript"></script>
+
+</body>
+
+</html>
